@@ -18,7 +18,7 @@ dutyCycleLevel03 = 100
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(fan_pin, GPIO.OUT, initial=GPIO.LOW)
 fan = GPIO.PWM(fan_pin, pwm_freq)
-fan.start(100) # dutyCycle
+fan.start(100) # start the PWM on 100 percent duty cycle, duty cycle value can be 0.0 to 100.0%, floats are OK
 time.sleep(delaystart)
 
 try:
